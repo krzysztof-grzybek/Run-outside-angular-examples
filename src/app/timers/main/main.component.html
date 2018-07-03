@@ -1,3 +1,8 @@
-<p>
-  Timers - main works!
-</p>
+<button (click)="setZone(true)">In the Zone</button>
+<button (click)="setZone(false)">Out of the Zone</button>
+<ng-container *ngIf="inZone">
+  <app-canvas [inZone]="true"></app-canvas>
+</ng-container>
+<ng-container *ngIf="!inZone">
+  <app-canvas [inZone]="false"></app-canvas>
+</ng-container>
