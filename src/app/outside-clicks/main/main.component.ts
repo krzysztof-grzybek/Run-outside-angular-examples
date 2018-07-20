@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  displayOptimized = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  showOptimized () {
+    this.displayOptimized = true;
+  }
+
+  showRegular() {
+    this.displayOptimized = false;
+  }
+  
+  ngAfterViewChecked() {
+    console.log('View checked!');
+  }
 }

@@ -1,3 +1,14 @@
-<p>
- Outside clicks - main works!
-</p>
+<div>
+    <button (click)="showRegular()" [class.active]="!displayOptimized">Show regular</button>
+    <button (click)="showOptimized()" [class.active]="displayOptimized">Show optimized</button>
+    <div *ngIf="!displayOptimized">
+        <app-dropdown></app-dropdown>
+        <app-dropdown></app-dropdown>
+        <app-dropdown></app-dropdown>
+    </div>
+    <div *ngIf="displayOptimized">
+        <app-dropdown-optimized></app-dropdown-optimized>
+        <app-dropdown-optimized></app-dropdown-optimized>
+        <app-dropdown-optimized></app-dropdown-optimized>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+:host {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+}
+
+.dropdown ul {
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    border: 1px solid #333;
+    list-style: none;
+}
+
+.dropdown ul li {
+    padding: 3px;
+    border-bottom: 1px solid #333;
+}
+
+.dropdown ul li:last-child {
+    border: 0;
+}

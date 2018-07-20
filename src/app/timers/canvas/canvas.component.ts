@@ -16,7 +16,7 @@ export class CanvasComponent implements AfterViewInit {
   @Input() inZone = true;
   @ViewChild('canvas') canvas: ElementRef<HTMLCanvasElement>;
 
-  private interval: Timer;
+  private interval: number;
   private color: Color = {
     r: 255,
     g: 0,
@@ -28,13 +28,13 @@ export class CanvasComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     if (this.inZone) {
-      this.interval = setInterval(() => {
+      this.interval = window.setInterval(() => {
         this.setNextColor()
         this.paint();
       }, 10)
     } else {
       this.ngZone.runOutsideAngular(() => {
-        this.interval = setInterval(() => {
+        this.interval = window.setInterval(() => {
           this.setNextColor()
           this.paint();
         }, 10)
