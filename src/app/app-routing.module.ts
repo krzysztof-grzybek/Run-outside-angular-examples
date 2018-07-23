@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: './outside-clicks/outside-clicks.module#OutsideClicksModule'
   },
   {
+    path: 'jquery-plugin',
+    loadChildren: './jquery-plugin/jquery-plugin.module#JqueryPluginModule'
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'

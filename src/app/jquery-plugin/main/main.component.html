@@ -1,0 +1,15 @@
+<div>
+    <button (click)="showRegular()" [class.active]="!displayOptimized">Show regular</button>
+    <button (click)="showOptimized()" [class.active]="displayOptimized">Show optimized</button>
+    <div *ngIf="!displayOptimized">
+        <app-color-picker (change)="onChange($event)"></app-color-picker>
+        <div class="color-preview" [style.background-color]="color">color preview</div>
+    </div>
+    <div *ngIf="displayOptimized">
+        <app-color-picker-optimized (change)="onChange($event)"></app-color-picker-optimized>
+
+        <div class="color-preview" [style.background-color]="color">color preview</div>
+    </div>
+</div>
+
+
