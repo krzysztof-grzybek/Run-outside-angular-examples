@@ -1,8 +1,13 @@
-<button (click)="setZone(true)">In the Zone</button>
-<button (click)="setZone(false)">Out of the Zone</button>
-<ng-container *ngIf="inZone">
-  <app-canvas [inZone]="true"></app-canvas>
-</ng-container>
-<ng-container *ngIf="!inZone">
-  <app-canvas [inZone]="false"></app-canvas>
-</ng-container>
+<div class="t-center">
+  <button (click)="setZone(true)">Show regular</button>
+  <button (click)="setZone(false)">Show optimized</button>
+</div>
+
+<div class="t-center">
+  <ng-container *ngIf="inZone">
+    <app-canvas [inZone]="true"></app-canvas>
+  </ng-container>
+  <ng-container *ngIf="!inZone">
+    <app-canvas [inZone]="false"></app-canvas>
+  </ng-container>
+</div>

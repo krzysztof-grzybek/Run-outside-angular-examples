@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import '~spectrum-colorpicker/spectrum.css';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    border: 0;
+    border-radius: 3px;
+    margin: 3px;
+    padding: 5px;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.active {
+    background-color: #777;
+}

@@ -13,8 +13,6 @@ export class ColorPickerComponent implements OnInit {
   @Output() change = new EventEmitter<string>();
   @ViewChild('picker') colorPickerEl: ElementRef;
 
-  constructor() { }
-
   ngOnInit() {
     $(this.colorPickerEl.nativeElement).spectrum({
       change: (c) => {

@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, NgZone, OnInit, Output, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, EventEmitter, NgZone, OnInit, Output, ViewChild } from '@angular/core';
 import * as $ from 'jquery';
 import 'spectrum-colorpicker';
 
@@ -6,7 +6,6 @@ import 'spectrum-colorpicker';
   selector: 'app-color-picker-optimized',
   templateUrl: './color-picker-optimized.component.html',
   styleUrls: ['./color-picker-optimized.component.css'],
-  encapsulation: ViewEncapsulation.None,
 })
 export class ColorPickerOptimizedComponent implements OnInit {
 
