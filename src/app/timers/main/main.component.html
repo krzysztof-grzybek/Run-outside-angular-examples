@@ -1,13 +1,13 @@
 <div class="t-center">
-  <button (click)="setZone(true)">Show regular</button>
-  <button (click)="setZone(false)">Show optimized</button>
+  <button (click)="setZone(true)" [class.active]="inZone">Show regular</button>
+  <button (click)="setZone(false)" [class.active]="!inZone">Show optimized</button>
 </div>
 
 <div class="t-center">
   <ng-container *ngIf="inZone">
-    <app-canvas [inZone]="true"></app-canvas>
+    <app-canvas></app-canvas>
   </ng-container>
   <ng-container *ngIf="!inZone">
-    <app-canvas [inZone]="false"></app-canvas>
+    <app-canvas-optimized></app-canvas-optimized>
   </ng-container>
 </div>

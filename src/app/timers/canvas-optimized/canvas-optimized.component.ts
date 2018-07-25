@@ -7,11 +7,11 @@ interface Color  {
 };
 
 @Component({
-  selector: 'app-canvas',
-  templateUrl: './canvas.component.html',
-  styleUrls: ['./canvas.component.css']
+  selector: 'app-canvas-optimized',
+  templateUrl: './canvas-optimized.component.html',
+  styleUrls: ['./canvas-optimized.component.css']
 })
-export class CanvasComponent implements AfterViewInit {
+export class CanvasOptimizedComponent implements AfterViewInit {
 
   @ViewChild('canvas') canvas: ElementRef<HTMLCanvasElement>;
 
@@ -26,10 +26,12 @@ export class CanvasComponent implements AfterViewInit {
   constructor(private ngZone: NgZone) { }
 
   ngAfterViewInit() {
-    this.interval = window.setInterval(() => {
-      this.setNextColor()
-      this.paint();
-    }, 10);
+    this.ngZone.runOutsideAngular(() => {
+      this.interval = window.setInterval(() => {
+        this.setNextColor()
+        this.paint();
+      }, 10)
+    });  
   }
 
   setNextColor() {
