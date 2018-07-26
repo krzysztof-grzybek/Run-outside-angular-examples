@@ -16,7 +16,7 @@ export class MainComponent implements AfterViewChecked, OnInit {
   }
 
   ngAfterViewChecked() {
-    console.log('View checked!');
+    console.log('Change detection triggered!');
   }
 
   setZone(inZone: boolean) {
