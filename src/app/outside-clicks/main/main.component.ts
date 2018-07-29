@@ -24,6 +24,6 @@ export class MainComponent implements OnInit {
   }
   
   ngAfterViewChecked() {
-    console.log('View checked!');
+    console.log('Change detection triggered!');
   }
 }

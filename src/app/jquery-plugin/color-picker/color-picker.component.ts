@@ -14,7 +14,7 @@ export class ColorPickerComponent implements OnInit {
   @ViewChild('picker') colorPickerEl: ElementRef;
 
   ngOnInit() {
-    $(this.colorPickerEl.nativeElement).spectrum({
+    (<any>$(this.colorPickerEl.nativeElement)).spectrum({
       change: (c) => {
         this.change.emit(c.toHexString());
       }

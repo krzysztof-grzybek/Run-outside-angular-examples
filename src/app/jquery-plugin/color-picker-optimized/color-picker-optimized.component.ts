@@ -18,7 +18,7 @@ export class ColorPickerOptimizedComponent implements OnInit {
 
   ngOnInit() {
     this.ngZone.runOutsideAngular(() => {
-      $(this.colorPickerEl.nativeElement).spectrum({
+      (<any>$(this.colorPickerEl.nativeElement)).spectrum({
         change: (c) => {
           this.ngZone.run(() => {
             this.change.emit(c.toHexString());
